@@ -31,6 +31,11 @@
  		return promise;
  	}
 
+ 	obj.getAuthorization = function(){
+
+ 		Spotify.login();
+ 	}
+
  	return obj;
 
 }]);

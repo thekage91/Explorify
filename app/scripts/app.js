@@ -12,7 +12,7 @@ angular
   .module('spootApp', [
     'ngRoute', 'spotify'
   ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider', 'SpotifyProvider', function ($routeProvider, SpotifyProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -27,4 +27,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+
+      SpotifyProvider.setClientId('e0d4cdb2986e4d039b3b7e6ea4ce440e');
+      SpotifyProvider.setRedirectUri('https://example.com/callback');
+      SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public');
+  }]);

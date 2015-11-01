@@ -8,15 +8,17 @@
  * Controller of the spootApp
  */
 angular.module('spootApp')
-  .controller('MainCtrl', [ '$log', 'spotifyService', function ($log, spotifyService) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
+  .controller('MainCtrl', ['$scope', '$log', 'spotifyService', function ($scope, $log, spotifyService) {
+    
     spotifyService.sampleTrackSpotifyUrl('6rqhFgbbKwnb9MLmUQDhG6').then(function(uri){
 
     	$log.info(uri);
     });
+
+    $scope.spotifyLogin = function(){
+
+    	spotifyService.getAuthorization();
+    };
+
+
 }]);
