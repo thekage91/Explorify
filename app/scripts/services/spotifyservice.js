@@ -36,6 +36,21 @@
  		Spotify.login();
  	}
 
+ 	obj.getAllTracks = function(){
+
+		Spotify.getSavedUserTracks().then(function (data) {
+		  console.log(data);
+		});
+ 	};
+
+ 	obj.getAllTitleTracks = function(){
+
+ 	};
+
+ 	obj.getAllArtist2Tracks = function(){
+
+ 	};
+
  	return obj;
 
 }]);

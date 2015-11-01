@@ -20,5 +20,9 @@ angular.module('spootApp')
     	spotifyService.getAuthorization();
     };
 
+    $scope.getTracks = function(){
+
+    	spotifyService.getAllTracks();
+    }
 
 }]);
