@@ -15,12 +15,12 @@ angular
   .config(['$routeProvider', 'SpotifyProvider', function ($routeProvider, SpotifyProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: './app/views/main.html',
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: './app/views/about.html',
+        templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
@@ -31,6 +31,6 @@ angular
       //https://example.com/callback#access_token=&token_type=Bearer&expires_in=3600
       // access_token = BQAlrC2BBmHzf5z-EExPI_1j64aD_LZQVQXuO2TOmFzIRbqqX_Bau4cbNP4RxriSW6S4MG5GqmiGjVu4ZSH_JGXSHynyX8DDekASIG5QkJ8xGPnmcCfBrq5rlj63KdG3e85sQtqnRqaYtC611zsj3NZACYnTeRFdRZlXYidp_Hdn7KhzR1MP6TtHXjUMOMzyAzAM1BHOFAXKAhbxAl4JkxGmpV-0xHixkvb3R6u9rwzB9rxHJNHGNzRzHKnTl0urlgHj
       SpotifyProvider.setClientId('e0d4cdb2986e4d039b3b7e6ea4ce440e');
-      SpotifyProvider.setRedirectUri('https://localhost.com');
+      SpotifyProvider.setRedirectUri('http://178.62.213.93');
       SpotifyProvider.setScope('user-read-private playlist-read-private playlist-modify-private playlist-modify-public user-library-read');
   }]);
