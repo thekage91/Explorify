@@ -15,12 +15,12 @@ angular
   .config(['$routeProvider', 'SpotifyProvider', function ($routeProvider, SpotifyProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'app/views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'app/views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
